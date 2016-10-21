@@ -1,0 +1,15 @@
+version: '2'
+services:
+    st2chatops:
+        image: unicell/st2-hubot:latest
+        network_mode: "bridge"
+        ports:
+            - "8081:8080"
+        volumes:
+            - ./st2chatops.env:/app/st2chatops.env
+        environment:
+            - ST2_HOSTNAME=${ST2_HOSTNAME}
+            - ST2_AUTH_USERNAME=${ST2_AUTH_USERNAME}
+            - ST2_AUTH_PASSWORD=${ST2_AUTH_PASSWORD}
+            - HUBOT_ADAPTER=${HUBOT_ADAPTER}
+            - HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN}

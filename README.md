@@ -25,6 +25,21 @@ Where ${DISTRO} refers to flavor name. See [docker-compose.yml](docker-compose.y
 
 ## Docker
 
+### Usage (with docker-compose)
+
+* Update environment variables in `.env` file (requires docker-compose 1.5.0+ for .env support)
+
+        ST2_HOSTNAME=<hostname>
+        ST2_AUTH_USERNAME=demo
+        ST2_AUTH_PASSWORD=demo
+        HUBOT_ADAPTER=slack
+        HUBOT_SLACK_TOKEN=xoxb-CHANGE-ME-PLEASE
+
+* Start st2chatops Hubot:
+
+        docker-compose -f st2chatops.yml up -d
+
+
 ### Usage
 
 * Pull the StackStorm/hubot image:
