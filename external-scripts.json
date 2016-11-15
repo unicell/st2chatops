@@ -1,4 +1,5 @@
 [
   "hubot-stackstorm",
+  "hubot-grafana",
   "hubot-help"
 ]

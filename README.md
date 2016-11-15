@@ -35,6 +35,11 @@ Where ${DISTRO} refers to flavor name. See [docker-compose.yml](docker-compose.y
         HUBOT_ADAPTER=slack
         HUBOT_SLACK_TOKEN=xoxb-CHANGE-ME-PLEASE
 
+* Update Grafana variables in `.env` file (optional)
+
+        HUBOT_GRAFANA_HOST=http://<host>:<port>
+        HUBOT_GRAFANA_API_KEY=<apikey>
+
 * Start st2chatops Hubot:
 
         docker-compose -f st2chatops.yml up -d
